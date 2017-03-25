@@ -20,17 +20,16 @@ if (isset($_POST['login'])) {
     <title>A2Team</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
-        <!-- add header -->
+        
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">A2Team</a>
         </div>
-        <!-- menu items -->
+      
         <div class="collapse navbar-collapse" id="navbar1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="./login.php">Login</a></li>
@@ -67,16 +66,17 @@ if (isset($_POST['login'])) {
     </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">    
-        New User? <a href="./joinus.php">Join Us</a>
+        	<a href="./joinus.php">if you want to join us</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">    
-         <a href="./dashboard.php">DashBoard</a>
+         <a href="./dashboard.php">Dashboard</a>
         </div>
     </div>
 </div>
 
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>

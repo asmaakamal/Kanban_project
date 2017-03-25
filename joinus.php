@@ -11,7 +11,7 @@ include_once 'dbconnect.php';
 $error = false;
 
 //check if form is submitted
-if (isset($_POST['signup'])) {
+if (isset($_POST['joinus'])) {
 	$user_name = mysqli_real_escape_string($link, $_POST['user_name']);
 	$email = mysqli_real_escape_string($link, $_POST['email']);
 	$password = mysqli_real_escape_string($link, $_POST['password']);
@@ -48,13 +48,28 @@ if (isset($_POST['signup'])) {
 <html>
 <head>
     <title>A2Team</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
 </head>
 <body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php">A2Team</a>
+        </div>
+      
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="./login.php">Login</a></li>
+                <li><a href="./joinus.php">Join Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4 well">
@@ -87,7 +102,7 @@ if (isset($_POST['signup'])) {
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" name="signup" value="Sign Up" class="btn btn-primary">
+                        <input type="submit" name="joinus" value="Join Us" class="btn btn-primary">
                     </div>
                 </fieldset>
             </form>
@@ -97,7 +112,7 @@ if (isset($_POST['signup'])) {
     </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">    
-        Already Registered? <a href="./login.php">Login Here</a>
+        	<a href="./login.php">if you want to login</a>
         </div>
     </div>
 </div>

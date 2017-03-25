@@ -3,6 +3,15 @@
 
 session_start();
 
+if(isset($_POST["drag"])){
+  echo json_encode("hellp");
+  exit;
+  update_task($_POST["task_no"], $_POST["task_status"]);
+  return;
+}
+
+
+
 function getTasks(){
 	$user_id = $_SESSION["usr_id"];
 	$link = mysqli_connect("localhost", "root", "", "project_managment") or die("Error " . mysqli_error($link));
@@ -31,6 +40,41 @@ function addTask($task_title){
 	}
 }
 
+function update_task($taskid, $taskstatus){
+	
+	$link = mysqli_connect("localhost", "root", "", "project_managment") or die("Error " . mysqli_error($link));
+	$task_title= mysqli_real_escape_string($link, $task_title);
+	$user_id = $_SESSION['usr_id'];
+	$query = "update user_task set task_status='$taskstatus' where Task_No=$taskid";
+	$sql = mysqli_query($link, $query);
+	
+	if($sql){
+	  echo json_encode(true);
+      exit;
+ 	}else{
+      echo json_encode(false);
+      exit;
+  	}
+}
+
+
+
+
+
+function delete_task($task_title){
+	
+	$link = mysqli_connect("localhost", "root", "", "project_managment") or die("Error " . mysqli_error($link));
+	$task_title= mysqli_real_escape_string($link, $task_title);
+	$user_id = $_SESSION['usr_id'];
+	$query = "delete Task_No, task_title, task_status, task_uid from user_task where task_title=\"$task_title\" ";
+	$sql = mysqli_query($link, $query);
+	
+	if($sql){
+		echo "Task has Deleted";
+	}else{
+		return false;
+	}
+}
 
 function login($data){
 
