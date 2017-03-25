@@ -77,7 +77,7 @@ if(isset($_POST['add']) && trim($_POST['task_title'])!=""){
 									?>
   				
 				<div id="<?php echo $task['Task_No']?>" draggable="true"
-ondragstart="drag(event)" class="panel-heading panel-danger"><?php echo $task['task_title']; ?></div>
+ondragstart="drag(event)" class="panel panel-body panel-default"><?php echo $task['task_title']; ?></div>
 			  <?php }} ?>
             
           
@@ -94,8 +94,9 @@ ondragstart="drag(event)" class="panel-heading panel-danger"><?php echo $task['t
 													if ($task ['task_status'] == 'doing') {
 														?>
   				
-				<div class="panel-heading panel-danger" id="<?php echo $task['Task_No']?>" draggable="true" ondragstart="drag(event)" ><?php echo $task['task_title']; ?></div>
+				<div class="panel panel-body panel-default" id="<?php echo $task['Task_No']?>" draggable="true" ondragstart="drag(event)" ><?php echo $task['task_title']; ?></div>
 				
+
             <?php }} ?>
           
 							</div>
@@ -111,7 +112,7 @@ ondragstart="drag(event)" class="panel-heading panel-danger"><?php echo $task['t
 													if ($task ['task_status'] == 'testing') {
 														?>
   				
-				<div class="panel-heading panel-danger" id="<?php echo $task['Task_No']?>" draggable="true"
+				<div class="panel panel-body panel-default" id="<?php echo $task['Task_No']?>" draggable="true"
 ondragstart="drag(event)" ><?php echo $task['task_title']; ?></div>
 				
             <?php }} ?>
@@ -130,7 +131,7 @@ ondragstart="drag(event)" ><?php echo $task['task_title']; ?></div>
 													if ($task ['task_status'] == 'done') {
 														?>
   				
-				<div class="panel-heading panel-danger" id="<?php echo $task['Task_No']?>" draggable="true"
+				<div class="panel panel-body panel-default" id="<?php echo $task['Task_No']?>" draggable="true"
 ondragstart="drag(event)" ><?php echo $task['task_title']; ?></div>
 				
             <?php }} ?>
